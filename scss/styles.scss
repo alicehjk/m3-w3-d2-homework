@@ -1,13 +1,30 @@
+@import 'colors';
+
+
+@mixin center-button {
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 7em;
+    height: 2.5em;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5em 2em;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+}
 
 
 //Global
 * {
-    color: ;
+    color: $green-dark;
     font-size: 1.2rem;
 }
 
 .container {
-    background-color: ;
+    background-color: $yellow;
     border: 1px solid #000;
     display: flex;
     height: 500px;
@@ -17,36 +34,22 @@
     width: 50%;
 
     .left {
-        background-color: ;
+        background-color: $green-light;
         height: 100%;
         width: 69%;
         position: relative;
     }
 
     .right {
-        background-color: ;
+        background-color: $lime;
         height: 100%;
         position: relative;
         width: 29%;
 
         .button {
-            background-color: ;
-            color: ;
-            border: 0;
-            border-radius: 10px;
-            cursor: pointer;
-            width: 7em;
-            height: 2.5em;
-            font-size: 1rem;
-            font-weight: bold;
-            padding: 0.5em 2em;
-
-            //this is to center content vertically
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translate(-50%, -120%);
+            background-color: $white;
+            color: $green-dark;
+            @include center-button;
         }
     }
-
 }
